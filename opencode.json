@@ -1,0 +1,11 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "apply-jobs-mcp": {
+      "type": "local",
+      "command": [".venv/bin/python", "-m", "apply_jobs_mcp.server"],
+      "environment": { "AJM_CONFIG": "config.example.toml" },
+      "enabled": true
+    }
+  }
+}

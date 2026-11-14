@@ -1,0 +1,24 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "apply-jobs-mcp"
+version = "0.1.0"
+description = "MCP server and scheduled worker for allowlisted internship discovery, review, and controlled applications"
+requires-python = ">=3.12"
+authors = [{ name = "Adarsh Gupta" }]
+dependencies = [
+    "mcp>=2.0",
+    "pypdf>=5",
+]
+
+[project.optional-dependencies]
+browser = ["playwright>=1.40"]
+dev = ["pytest>=8"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/apply_jobs_mcp"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

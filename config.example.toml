@@ -1,0 +1,27 @@
+# apply-jobs-mcp global configuration.
+# Copy to config.toml (gitignored) to override defaults.
+
+[paths]
+resume_tex = "/Users/girishsharma/Downloads/Girish_Sharma_SDE_Intern_Resume.pdf"
+data_dir = "data"
+output_dir = "output"
+campaign = "campaigns/summer-2027.toml"
+
+[schedule]
+timezone = "Asia/Kolkata"
+start = "07:00"
+stop = "10:00"
+scan_interval_days = 3
+
+[browser]
+visible = true
+profile_dir = "data/browser-profile"
+authenticated_only_on_request = true
+# engine: "firefox" (recommended - fewest site blocks) or "chromium"
+engine = "firefox"
+
+[llm]
+provider = "ollama"
+endpoint = "http://127.0.0.1:11434"
+model = "gemma4:31b-cloud"
+enabled = false

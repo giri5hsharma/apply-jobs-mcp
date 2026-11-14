@@ -1,0 +1,37 @@
+# Campaign policy: Summer/Spring 2027 CSE internships.
+# Requirements live here on purpose - adjust in the future by editing this file.
+
+id = "summer-spring-2027"
+job_type = "internship"
+
+# Season window (Spring/Summer 2027: May - July inclusive, flexible).
+season_start = "2027-05-01"
+season_end = "2027-07-31"
+
+# Accepts 2028 graduates.
+graduation_years = [2028]
+
+# Compensation: Indian roles >= Rs 25k/month; foreign >= Rs 50k/month equivalent.
+domestic_min_inr_monthly = 25000
+foreign_min_inr_monthly = 50000
+foreign_requires_visa_support = true
+
+# Relocation/housing: not required, accepted when offered.
+relocation_required = false
+housing_required = false
+
+# Any location is fine; high-paying jobs are surfaced regardless of city.
+remote_ok = true
+preferred_hubs = ["Bangalore", "Hyderabad", "Delhi", "Gurgaon", "Pune", "Noida", "Mumbai"]
+
+# Any internship with a software-engineering component qualifies.
+roles = ["backend", "fastapi", "python", "node.js", "express.js", "rest api",
+         "cloud", "azure", "docker", "javascript", "sql", "software engineer"]
+
+# Workload controls.
+max_submissions_per_day = 10
+scan_interval_days = 3
+
+# Approved sources (registry ids; see sources.py).
+source_ids = ["internshala", "linkedin", "glassdoor", "google", "meta", "nvidia",
+              "amazon", "jpmorgan", "salesforce", "goldmansachs", "qualcomm", "microsoft"]

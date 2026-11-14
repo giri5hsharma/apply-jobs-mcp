@@ -1,0 +1,11 @@
+[Unit]
+Description=apply-jobs-mcp public scan (scheduled)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=@ROOT@
+ExecStart=@ROOT@/.venv/bin/python -m apply_jobs_mcp.worker --source all
+Environment=AJM_CONFIG=@ROOT@/config.example.toml
+Nice=10
